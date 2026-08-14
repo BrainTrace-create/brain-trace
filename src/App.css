@@ -1,0 +1,1141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f3ec;
+  color: #20262e;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 7%;
+  background: #fffdf8;
+  border-bottom: 1px solid #ded8ce;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #20262e;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #77736d;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  max-width: 900px;
+  margin: auto;
+  padding: 90px 20px 70px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #8a5a32;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #20262e;
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -3px;
+}
+
+.description {
+  max-width: 620px;
+  margin: 28px auto 0;
+  color: #625e58;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================
+   HOMEPAGE GAMES
+   ========================= */
+
+.games {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 30px 100px;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading p {
+  margin: 0 0 7px;
+  color: #8a5a32;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #20262e;
+  font-size: 32px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.game-card {
+  min-height: 365px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(50, 40, 30, 0.08);
+}
+
+.game-card.wordshift {
+  background: #e9e1f5;
+}
+
+.game-card.target {
+  background: #dcecf1;
+}
+
+.game-card.changed {
+  background: #f3e4c8;
+}
+
+.game-card.sixty {
+  background: #dfead7;
+}
+
+.game-icon {
+  margin-bottom: 18px;
+  font-size: 34px;
+}
+
+.game-number {
+  margin: 0 0 8px;
+  color: #655d55;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.game-card h3 {
+  margin: 0 0 14px;
+  color: #20262e;
+  font-size: 27px;
+}
+
+.game-card p {
+  margin: 0;
+  color: #56514b;
+  line-height: 1.55;
+}
+
+.game-card button {
+  margin-top: auto;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #20262e;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.game-card button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =========================
+   DAILY MESSAGE
+   ========================= */
+
+.daily-message {
+  padding: 100px 20px;
+  background: #e8dfd2;
+  text-align: center;
+}
+
+.message-icon {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.daily-message h2 {
+  margin: 0;
+  color: #20262e;
+  font-size: 38px;
+  line-height: 1.15;
+}
+
+.daily-message p {
+  margin-top: 20px;
+  color: #625e58;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 7%;
+  background: #20262e;
+  color: #eee9df;
+  font-size: 13px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* =========================
+   GAME SCREEN
+   ========================= */
+
+.game-screen {
+  max-width: 1100px;
+  min-height: 760px;
+  margin: auto;
+  padding: 30px 30px 90px;
+}
+
+.game-screen-content {
+  max-width: 850px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.game-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.home-button,
+.back-button {
+  border: none;
+  background: transparent;
+  color: #4f4a45;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.home-button:hover,
+.back-button:hover {
+  color: #8a5a32;
+}
+
+/* =========================
+   DAILY LABEL
+   ========================= */
+
+.daily-puzzle-label {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background: #e8dfd2;
+  color: #5c5147;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   GAME HEADINGS
+   ========================= */
+
+.game-screen-content h1 {
+  margin: 24px 0 0;
+  color: #20262e;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.game-screen-content > .description {
+  color: #55514b;
+}
+
+/* =========================
+   DIFFICULTY CARDS
+   ========================= */
+
+.difficulty-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 55px;
+  text-align: left;
+}
+
+.difficulty-card {
+  min-height: 430px;
+  padding: 38px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 26px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 40px rgba(50, 40, 30, 0.09);
+}
+
+.difficulty-card.medium {
+  background: #e5efd9;
+}
+
+.difficulty-card.hard {
+  background: #f3deda;
+}
+
+.difficulty-icon {
+  margin-bottom: 18px;
+  font-size: 30px;
+}
+
+.difficulty-number {
+  margin: 0 0 8px;
+  color: #66615b;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.difficulty-card h2 {
+  margin: 0 0 14px;
+  color: #20262e;
+  font-size: 36px;
+}
+
+.difficulty-card > p:not(.difficulty-number) {
+  margin: 0;
+  max-width: 430px;
+  color: #4f4a45;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.difficulty-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.difficulty-details span {
+  display: block;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #403c37;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.difficulty-card button {
+  width: 100%;
+  margin-top: auto;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #20262e;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+/* =========================
+   NEXT DAILY PUZZLE
+   ========================= */
+
+.next-puzzle-card {
+  max-width: 380px;
+  margin: 35px auto;
+  padding: 25px;
+  border-radius: 18px;
+  background: #e8dfd2;
+  text-align: center;
+}
+
+.next-puzzle-card p {
+  margin: 0 0 8px;
+  color: #5c5147;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.next-puzzle-card strong {
+  display: block;
+  color: #20262e;
+  font-size: 34px;
+  font-variant-numeric: tabular-nums;
+}
+
+.next-puzzle-card span {
+  display: block;
+  margin-top: 5px;
+  color: #6d6861;
+  font-size: 13px;
+}
+
+/* =========================
+   TIMER
+   ========================= */
+
+.timer-display {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px auto 25px;
+  padding: 15px 30px;
+  border-radius: 16px;
+  background: #fffdf8;
+  border: 1px solid #d8d0c5;
+}
+
+.timer-display span {
+  color: #77716a;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.timer-display strong {
+  margin-top: 3px;
+  color: #20262e;
+  font-size: 30px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================
+   WORDSHIFT PUZZLE
+   ========================= */
+
+.wordshift-puzzle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin: 25px 0 35px;
+}
+
+.starting-word,
+.target-word {
+  min-width: 150px;
+  padding: 24px 30px;
+  border-radius: 18px;
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.starting-word {
+  background: #e9dfd1;
+  color: #302a25;
+}
+
+.target-word {
+  background: #d8e7ca;
+  color: #26351e;
+}
+
+.arrow {
+  color: #8a5a32;
+  font-size: 30px;
+}
+
+/* =========================
+   WORD HISTORY
+   ========================= */
+
+.word-history {
+  margin: 30px auto;
+}
+
+.word-history h3 {
+  margin-bottom: 15px;
+  color: #35302b;
+  font-size: 15px;
+}
+
+.word-history-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.history-word {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #fffdf8;
+  border: 1px solid #d8d0c5;
+  color: #25211e;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   WORD INPUT
+   ========================= */
+
+.word-input-area {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.word-input-area input {
+  width: 220px;
+  padding: 17px 18px;
+  border: 2px solid #c9c0b4;
+  border-radius: 12px;
+  outline: none;
+  background: #ffffff;
+  color: #20262e;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.word-input-area input:focus {
+  border-color: #8a5a32;
+}
+
+.word-input-area input::placeholder {
+  color: #99918a;
+  opacity: 1;
+  text-transform: none;
+}
+
+.word-input-area button {
+  padding: 0 25px;
+  border: none;
+  border-radius: 12px;
+  background: #20262e;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.puzzle-message {
+  min-height: 24px;
+  margin: 18px 0;
+  color: #5d4634;
+  font-weight: 800;
+}
+
+/* =========================
+   GAME STATS
+   ========================= */
+
+.game-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.game-stats > div {
+  padding: 18px;
+  border-radius: 14px;
+  background: #fffdf8;
+  border: 1px solid #d8d0c5;
+}
+
+.game-stats span {
+  display: block;
+  color: #77716a;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.game-stats strong {
+  display: block;
+  margin-top: 5px;
+  color: #20262e;
+  font-size: 24px;
+}
+
+/* =========================
+   RESULT SCREEN
+   ========================= */
+
+.result-screen {
+  position: relative;
+  max-width: 750px;
+  margin: 45px auto 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/*
+   Celebration is deliberately kept inside
+   the result section so it cannot overlap
+   the WordShift / Medium heading above.
+*/
+
+.result-celebration {
+  position: relative;
+  z-index: 5;
+  display: block;
+  margin: 0 auto 8px;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.result-title {
+  position: relative;
+  z-index: 5;
+  margin: 10px 0 8px;
+  color: #20262e !important;
+  font-size: clamp(38px, 6vw, 58px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.result-subtitle {
+  position: relative;
+  z-index: 5;
+  margin: 8px 0 0;
+  color: #4d4842 !important;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.result-screen .eyebrow {
+  position: relative;
+  z-index: 5;
+}
+
+/* =========================
+   OFFICIAL SCORE
+   ========================= */
+
+.official-score-card {
+  position: relative;
+  z-index: 5;
+  max-width: 360px;
+  margin: 35px auto 25px;
+  padding: 30px;
+  border-radius: 22px;
+  background: #20262e;
+  color: #ffffff;
+  box-shadow: 0 20px 45px rgba(31, 41, 51, 0.2);
+}
+
+.official-label {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.official-score-number {
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.official-points {
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 2px;
+  opacity: 0.75;
+}
+
+.final-time {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 14px 24px;
+  border-radius: 14px;
+  background: #e8dfd2;
+}
+
+.final-time span {
+  color: #5c5147;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.final-time strong {
+  margin-top: 4px;
+  color: #20262e;
+  font-size: 24px;
+}
+
+.result-description {
+  margin: 25px 0;
+  color: #4d4842 !important;
+  line-height: 1.5;
+}
+
+.result-description strong {
+  color: #20262e;
+}
+
+.result-history {
+  margin-top: 30px;
+}
+
+.result-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.result-stat {
+  padding: 18px 10px;
+  border-radius: 14px;
+  background: #fffdf8;
+  border: 1px solid #d8d0c5;
+}
+
+.result-stat span {
+  display: block;
+  color: #77716a;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.result-stat strong {
+  display: block;
+  margin-top: 6px;
+  color: #20262e;
+  font-size: 21px;
+}
+
+/* =========================
+   RESULT BUTTONS
+   ========================= */
+
+.play-again-button {
+  position: relative;
+  z-index: 5;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  background: #20262e;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.back-to-games-result {
+  display: block;
+  margin: 18px auto;
+  border: none;
+  background: transparent;
+  color: #4f4a45;
+  font-weight: 800;
+}
+
+/* =========================
+   CONFETTI
+   ========================= */
+
+.confetti-container {
+  position: absolute;
+  z-index: 2;
+
+  /*
+    Keep confetti below the result heading
+    and completely inside the result area.
+  */
+  top: 70px;
+  left: 0;
+  right: 0;
+
+  height: 190px;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  border-radius: 2px;
+  animation: fall 1.8s ease-out forwards;
+}
+
+.confetti-1 {
+  left: 5%;
+  top: 10px;
+  background: #e76f51;
+}
+
+.confetti-2 {
+  left: 13%;
+  top: 50px;
+  background: #2a9d8f;
+}
+
+.confetti-3 {
+  left: 22%;
+  top: 5px;
+  background: #e9c46a;
+}
+
+.confetti-4 {
+  left: 31%;
+  top: 60px;
+  background: #457b9d;
+}
+
+.confetti-5 {
+  left: 40%;
+  top: 20px;
+  background: #f4a261;
+}
+
+.confetti-6 {
+  left: 50%;
+  top: 55px;
+  background: #e63946;
+}
+
+.confetti-7 {
+  left: 60%;
+  top: 10px;
+  background: #2a9d8f;
+}
+
+.confetti-8 {
+  left: 69%;
+  top: 65px;
+  background: #e9c46a;
+}
+
+.confetti-9 {
+  left: 77%;
+  top: 25px;
+  background: #457b9d;
+}
+
+.confetti-10 {
+  left: 85%;
+  top: 55px;
+  background: #e76f51;
+}
+
+.confetti-11 {
+  left: 92%;
+  top: 10px;
+  background: #f4a261;
+}
+
+.confetti-12 {
+  left: 55%;
+  top: 85px;
+  background: #e63946;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) rotate(0deg);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(150px) rotate(240deg);
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .header {
+    padding: 20px;
+  }
+
+  .tagline {
+    display: none;
+  }
+
+  .hero {
+    padding: 65px 20px 50px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .games {
+    padding: 20px 20px 70px;
+  }
+
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .difficulty-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .difficulty-card {
+    min-height: auto;
+  }
+
+  .game-screen {
+    padding: 25px 20px 70px;
+  }
+
+  .game-screen-content {
+    margin-top: 35px;
+  }
+
+  .wordshift-puzzle {
+    gap: 12px;
+  }
+
+  .starting-word,
+  .target-word {
+    min-width: 120px;
+    padding: 20px 15px;
+    font-size: 30px;
+  }
+
+  .word-input-area {
+    flex-direction: column;
+  }
+
+  .word-input-area input {
+    width: 100%;
+  }
+
+  .word-input-area button {
+    padding: 15px;
+  }
+
+  .game-stats,
+  .result-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .daily-message h2 {
+    font-size: 30px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .confetti-container {
+    top: 65px;
+  }
+
+  .game-navigation {
+    align-items: flex-start;
+  }
+
+  .result-title {
+    font-size: 42px;
+  }
+
+  .result-celebration {
+    font-size: 42px;
+  }
+
+}
+/* ============================================================
+   WORDSHIFT EXAMPLE
+   ============================================================ */
+
+.wordshift-example {
+  margin: 35px auto 45px;
+  padding: 28px 30px;
+  max-width: 850px;
+  background: #f8f7f3;
+  border-radius: 20px;
+  border: 1px solid #e5e1d8;
+}
+
+.example-label {
+  margin: 0 0 22px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #77736b;
+}
+
+.example-route {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.example-word {
+  min-width: 82px;
+  min-height: 68px;
+  padding: 10px 14px;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.start-word {
+  background: #dff2df;
+  color: #286b35;
+  border: 2px solid #8fc995;
+}
+
+.target-word-example {
+  background: #dcecff;
+  color: #245b96;
+  border: 2px solid #8db9e8;
+}
+
+.middle-word {
+  background: white;
+  color: #44413c;
+  border: 2px solid #ddd8ce;
+}
+
+.example-word small {
+  margin-top: 5px;
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+
+.example-arrow {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #99948b;
+}
+
+.example-explanation {
+  margin: 22px 0 0;
+  font-size: 0.95rem;
+  color: #666158;
+}
+
+.example-explanation strong {
+  color: #2d2a26;
+}
+
+
+/* ============================================================
+   WORDSHIFT EXAMPLE — MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+  .wordshift-example {
+    padding: 22px 12px;
+    margin: 30px auto 35px;
+  }
+
+  .example-route {
+    gap: 5px;
+  }
+
+  .example-word {
+    min-width: 55px;
+    min-height: 55px;
+    padding: 7px 5px;
+    font-size: 0.95rem;
+  }
+
+  .example-word small {
+    font-size: 0.42rem;
+  }
+
+  .example-arrow {
+    font-size: 1rem;
+  }
+
+}
+.letter-highlight {
+  display: inline-block;
+  color: #c94b3c;
+  font-weight: 900;
+  transform: scale(1.15);
+}
