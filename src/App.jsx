@@ -116,6 +116,17 @@ function App() {
   const [screen, setScreen] =
     useState("home")
 
+  // Always return to the top when changing screens.
+  // This prevents mobile users from landing halfway
+  // down the next screen.
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    })
+  }, [screen])
+
   const [difficulty, setDifficulty] =
     useState(null)
 
